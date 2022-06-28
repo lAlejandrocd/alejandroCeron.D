@@ -1,0 +1,17 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+h4 {
+  font-family: "Roboto Mono", monospace;
+  font-size: 40px;
+  display: block;
+}
+
+body {
+  background-color: bisque;
+}
+
+/* Fuente  */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
