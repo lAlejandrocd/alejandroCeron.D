@@ -1,1 +1,3 @@
 # portafolio
+
+font = SF Mono
