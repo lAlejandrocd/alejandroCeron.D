@@ -2,16 +2,29 @@
   padding: 0px;
   margin: 0px;
 }
+.container h1 {
+  font-family: Fira Mono;
+  font-size: 60px;
+  display: grid;
+  font-style: italic;
+  border: 1px solid red;
+  width: 100%;
+  padding: 20px;
+  align-items: center;
+}
 
-h4 {
-  font-family: SF-Mono, monospace;
-  font-size: 40px;
+h3 {
+  font-family: Fira Mono;
+  font-size: 35px;
   display: block;
 }
 
 body {
-  background-color: bisque;
+  background-color: white;
 }
 
-/* Fuente  */
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
+/**  */
+@font-face {
+  font-family: Fira Mono;
+  src: url(../fonts/fira-Mono/FiraMono-Regular.ttf);
+}
