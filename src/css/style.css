@@ -29,19 +29,15 @@ a {
   text-decoration: none;
 }
 
-h3 {
-  font-family: Fira Mono;
-  font-size: 35px;
-  display: block;
-}
+
 
 body {
   background-color: white;
 }
 
-span {
+h1 {
   display: block;
-  font-family: monospace;
+  font-family: "Roboto mono";
   /* No romper líneas en blanco */
   white-space: nowrap;
   border-right: 4px solid;
@@ -52,6 +48,7 @@ span {
   animation: typing 2s steps(12), blink 0.5s step-end alternate;
   overflow: hidden;
 
+
   /* personalización del texto */
   font-size: 60px;
   display: block;
@@ -60,6 +57,15 @@ span {
   padding: 100px;
   text-align: center;
 }
+
+
+h3 {
+  font-family: Roboto mono;
+  font-size: 35px;
+  display: block;
+  color: black;
+}
+
 
 /* Animación del span */
 @keyframes typing {
@@ -75,6 +81,8 @@ span {
 }
 /**  */
 @font-face {
-  font-family: Fira Mono;
-  src: url(../fonts/fira-Mono/FiraMono-Regular.ttf);
+  /* font-family: Fira Mono;
+  src: url(../fonts/fira-Mono/FiraMono-Regular.ttf); */
+  font-family: Roboto mono;
+  src: url(../fonts/roboto-mono/RobotoMono-Light.ttf)
 }
