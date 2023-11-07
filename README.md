@@ -1,6 +1,6 @@
 # portafolio
 
-font = SF Mono
+font = Roboto mono para texto, Hack Nerd Font Mono para el menú
 
 
 
