@@ -1,11 +1,11 @@
 body{
-background-color: #d9e1e6e3;
+background-color: #dadbdce3;
 width: 90%;
 }
 
 .main-container{
   width: 600px;
-  padding: 120px;
+  padding: 80px;
   margin: auto;
   text-align: center;
 }
@@ -16,13 +16,13 @@ width: 90%;
 }
 
 .main-container .container-1 p{
-  text-align: center;
   padding: 0;
-  font-size: 3rem;
+  font-size: 4rem;
   color: black;
   gap: 4px;
   display: inline;
   font-family: Roboto mono;
+  font-style: normal;
 }
 
 .main-container .container-1 h3{
@@ -30,14 +30,13 @@ width: 90%;
   font-family: Roboto mono;
   color: blue;
   display: inline;
-
 }
 
 
-#menu ul,
+.container-3 #menu ul,
 a {
   list-style: none;
-  font-family: Fira Mono;
+  font-family: Hack Nerd Font;
   font-style: oblique;
   font-size: 1rem;
   display: inline-flex;
@@ -61,5 +60,8 @@ a {
   /* font-family: Fira Mono;
   src: url(../fonts/fira-Mono/FiraMono-Regular.ttf); */
   font-family: Roboto mono;
-  src: url(../fonts/roboto-mono/RobotoMono-Light.ttf)
+  src: url(../fonts/roboto-mono/RobotoMono-Light.ttf),
+  url(../fonts/hack-nerd-font/HackNerdFontMono-Italic.ttf)
+  font-style:normal;
+  font-weight:normal;
 }
