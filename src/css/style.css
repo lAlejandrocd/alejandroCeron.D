@@ -10,65 +10,67 @@ body{
   margin: 100px auto;
   padding: 5px;
   border: 1px solid black;
+  display: grid;
+}
+
+.header-section{
+text-align: right;
+display: inline;
 }
 
 .header-title{
   max-width: 350px;
-  display: inline-flex;
+  justify-content: start;
+  display: grid;
 }
 
 #title{
   padding: 0;
-  font-size: 3.7rem;
+  font-size: 2.2rem;
   color: black;
-  gap: 4px;
-
-  border: 1px solid blue;
-  font-style: italic;
+  font-family: Hack Nerd Font;
+  border: 10px black solid;
 }
 
 #sub-title{
-  font-size: 1.6rem;
+  font-family: Hack Nerd Font;
+  font-size: 1.4rem;
   font-style: italic;
   color: gray;
+  place-items: start;
+  border: 10px yellow solid;
+  text-align: left;
+}
+
+.profile-photo{
+  display: grid;
 }
 
 .container-3{
-  border: 5px solid gray;
+
   text-align: center;
 }
 
 .container-3 #menu ul li{
-  border: 1px black solid;
+
   text-decoration: none;
   list-style: none;
   display: inline;
 }
 
 .container-3 #menu a{
-  border: 1px red solid;
+
   text-decoration: none;
   font-style: oblique;
   font-size: 1rem;
 }
 
-.profile-photo{
-  border:5px solid black;
-  height: 100%;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-}
+
 
 
 @font-face {
-  /* font-family: Fira Mono;
-  src: url(../fonts/fira-Mono/FiraMono-Regular.ttf); */
-  /* font-family: Roboto mono;
-  src: url(../fonts/roboto-mono/RobotoMono-Light.ttf),
-  url(../fonts/hack-nerd-font/HackNerdFontMono-Italic.ttf)
-  font-style:normal;
-  font-weight:normal; */
+  font-family: Hack Nerd Font;
+  src: url(../fonts/hack-nerd-font/HackNerdFont-Regular.ttf);
 }
 
 
