@@ -1,3 +1,11 @@
+html{
+  box-sizing: border-box;
+}
+
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+
 body{
   background-color: #dadbdce3;
   width: 100%;
@@ -7,8 +15,7 @@ body{
 
 .container{
   max-width: 650px;
-  margin: 100px auto;
-  padding: 3px;
+  margin: 60px auto;
 }
 
 .header-section{
@@ -43,30 +50,42 @@ img{
 
 .container-3{
   /* text-align: center; */
+  border: 1px red solid;
+
 }
 
 .container-3 #menu ul li{
   text-decoration: none;
   list-style: none;
   display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
-.container-3 #menu a{
+.container-3 #menu{
+
+}
+
+.btn1, .btn2, .btn3, .btn4 {
+  font-size: 1rem;
+}
+
+.container-3 #menu a button{
   text-decoration: none;
-  font-style: oblique;
-  font-size: 1.2rem;
   color: black;
   font-family: Hack Nerd Font;
 }
 
-.container-3 .item-2, .item-4{
+.item-2, .item-4{
   color: gray;
 }
 
+/* Texto párrafo. */
+.container-4 p{
+  border: 1px solid black;
+  font-family: Hack Nerd Font;
+  font-size: 20px;
+}
 
+/* Fonts */
 @font-face {
   font-family: Hack Nerd Font;
   src: url(../fonts/hack-nerd-font/HackNerdFont-Regular.ttf);
@@ -80,13 +99,19 @@ img{
   }
 
   .container-3 #menu{
-    text-align: left;
-    padding: 5px 1px;
+
+
   }
-  .container-3 #menu ul li a{
-    /* border: 10px solid black; */
-    display: grid;
-    grid-template-columns: repeat(1, 4fr);
-    grid-template-rows: auto;
+  .container-3 #menu ul li a {
+    display: flex;
+    flex-direction: row-reverse;
+    list-style: none;
+    text-decoration: none;
+
+
+  }
+
+  .btn1, .btn2, .btn3, .btn4 {
+    font-size: 0.7rem;
   }
 }
