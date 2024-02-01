@@ -71,6 +71,14 @@ img{
   cursor: pointer;
 }
 
+.container-4 #menu{
+  text-decoration: none;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+
 .container-4 #menu ul {
   text-decoration: none;
   list-style: none;
