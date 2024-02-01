@@ -33,9 +33,6 @@ body{
   grid-template-columns: repeat(2,auto);
 }
 
-.header-title{
-
-}
 
 #title{
   font-size: 2.8rem;
@@ -59,8 +56,9 @@ img{
 }
 
 .links{
-  border: 1px var(--black) solid;
   margin: 15px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .links a{
@@ -74,10 +72,7 @@ img{
 .container-4 #menu{
   text-decoration: none;
   list-style: none;
-  display: inline-flex;
-  align-items: center;
 }
-
 
 .container-4 #menu ul {
   text-decoration: none;
@@ -90,28 +85,20 @@ img{
 .btn1, .btn2, .btn3, .btn4 {
   font-size: 1rem;
   background: transparent;
-  border-radius: 15px;
+  border-radius: 30px;
   box-sizing: border-box;
   transition: 0.4s ease all;
-  width: 135px;
-  height: 25px;
-}
-
-.container-4 #menu a button{
-  text-decoration: none;
-  color: var(--black);
+  width: auto;
+  height: auto;
   font-family: Hack Nerd Font;
-}
-
-.item-2, .item-4{
-  color: var(--gray);
 }
 
 /* Texto párrafo. */
 .container-5 p{
-  border: 1px solid var(--black);
   font-family: Hack Nerd Font;
   font-size: 20px;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 /* Fonts */
