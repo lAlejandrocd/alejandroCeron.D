@@ -1,10 +1,11 @@
-/* html{
+html{
   box-sizing: border-box;
 }
-
-*, *::before, *::after{
+ *,
+ *::after,
+ *::before {
   box-sizing: inherit;
-} */
+}
 
 :root{
   --background: #dadbdce3;
@@ -12,8 +13,7 @@
   --gray: #a4a4a4;
   --yellow: #ffff00;
   --pink: #eb4888;
-  --blue: #10A2F4;
-
+  --blue: #84848d;
 }
 
 body{
@@ -31,19 +31,19 @@ body{
 .header-section{
   display: grid;
   grid-template-columns: repeat(2,auto);
+  align-items: center;
 }
 
 
 #title{
-  font-size: 2.8rem;
+  font-size: 3.8rem;
   color: var(--black);
-  font-family: Hack Nerd Font;
-
+  font-family: 'iA Writer Mono', monospace;
 }
 
 #sub-title{
-  font-family: Hack Nerd Font;
-  font-size: 1.4rem;
+  font-family: 'iA Writer Mono', monospace;
+  font-size: 1.8rem;
   font-style: italic;
   color: var(--gray);
   text-align: left;
@@ -53,25 +53,7 @@ img{
   width: 200px;
   height: 200px;
   border-radius: 200px;
-}
-
-.links{
-  margin: 15px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.links a{
-  font-family: Hack Nerd Font;
-  text-decoration-thickness: 0.3ex;
-  text-underline-offset: 0.3ex;
-  color: var(--black);
-  cursor: pointer;
-}
-
-.container-4 #menu{
-  text-decoration: none;
-  list-style: none;
+  padding: 10px;
 }
 
 .container-4 #menu ul {
@@ -82,30 +64,71 @@ img{
   padding: 0px;
 }
 
-.btn1, .btn2, .btn3, .btn4 {
-  font-size: 1rem;
-  background: transparent;
-  border-radius: 30px;
-  box-sizing: border-box;
-  transition: 0.4s ease all;
-  width: auto;
-  height: auto;
-  font-family: Hack Nerd Font;
+.links{
+  margin: 20px;
+  padding: 0px 12px 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  color: var(--black);
+}
+
+.btn1{
+  font-family: 'iA Writer Mono', monospace;
+  text-decoration-thickness: 0.3ex;
+  text-underline-offset: 0.3ex;
+  text-decoration-color: var(--blue);
+  cursor: pointer;
+}
+
+.btn2{
+  font-family: 'iA Writer Mono', monospace;
+  text-decoration-thickness: 0.3ex;
+  text-underline-offset: 0.3ex;
+  text-decoration-color: var(--black);
+  cursor: pointer;
+}
+
+.btn3{
+  font-family: 'iA Writer Mono', monospace;
+  text-decoration-thickness: 0.3ex;
+  text-underline-offset: 0.3ex;
+  text-decoration-color: var(--blue);
+  cursor: pointer;
+}
+
+.btn4{
+  font-family: 'iA Writer Mono', monospace;
+  text-decoration-thickness: 0.3ex;
+  text-underline-offset: 0.3ex;
+  text-decoration-color: var(--black);
+  cursor: pointer;
+}
+
+.btn1:hover{
+  text-decoration-color: var(--black);
+}
+
+.btn2:hover{
+  text-decoration-color: var(--blue);
+}
+
+.btn3:hover{
+  text-decoration-color: var(--black);
+}
+
+.btn4:hover{
+  text-decoration-color: var(--blue);
 }
 
 /* Texto párrafo. */
 .container-5 p{
-  font-family: Hack Nerd Font;
+  font-family: 'iA Writer Mono', monospace;
   font-size: 20px;
   text-align: justify;
-  text-justify: inter-word;
+  /* separación de texto */
+  line-height: 1.6;
 }
 
-/* Fonts */
-@font-face {
-  font-family: Hack Nerd Font;
-  src: url(../fonts/hack-nerd-font/HackNerdFont-Regular.ttf);
-}
 
 
 /* Tablets responsive */
@@ -123,8 +146,6 @@ img{
     flex-direction: row-reverse;
     list-style: none;
     text-decoration: none;
-
-
   }
 
   .btn1, .btn2, .btn3, .btn4 {
