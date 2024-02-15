@@ -1,0 +1,22 @@
+{
+  "name": "alejandroceron.d",
+  "version": "1.0.0",
+  "description": "website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lAlejandrocd/alejandroCeron.D.git"
+  },
+  "author": "Alejandro ceron delgado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lAlejandrocd/alejandroCeron.D/issues"
+  },
+  "homepage": "https://github.com/lAlejandrocd/alejandroCeron.D#readme",
+  "dependencies": {
+    "@fontsource/ia-writer-mono": "^5.0.7"
+  }
+}
