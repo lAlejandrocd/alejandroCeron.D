@@ -22,10 +22,15 @@ body{
   margin: 0px;
   padding: 0px;
 }
-
+/*
 .container{
   max-width: 650px;
   margin: 60px auto;
+} */
+
+.container{
+  width: 650px;
+  margin: auto;
 }
 
 .header-section{
@@ -36,14 +41,14 @@ body{
 
 
 #title{
-  font-size: 3.8rem;
+  font-size: 3.9rem;
   color: var(--black);
   font-family: 'iA Writer Mono', monospace;
 }
 
 #sub-title{
   font-family: 'iA Writer Mono', monospace;
-  font-size: 1.8rem;
+  font-size: 2.0rem;
   font-style: italic;
   color: var(--gray);
   text-align: left;
@@ -54,14 +59,16 @@ img{
   height: 200px;
   border-radius: 200px;
   padding: 10px;
+  margin: auto;
 }
 
-.container-4 #menu ul {
+.container-4 ul{
   text-decoration: none;
   list-style: none;
-  display: inline-flex;
+  display: flex;
   margin: 0px;
   padding: 0px;
+
 }
 
 .links{
@@ -134,21 +141,35 @@ img{
 /* Tablets responsive */
 @media screen and (max-width:600px) {
   body{
-    background-color: var(--yellow);
+    /* background-color: var(--yellow); */
+
+    .container{
+      width: 90%;
+      margin: auto;
+    }
+
+    img{
+      width: 160px;
+      height: 160px;
+      margin: auto;
+    }
+
+    .header-section{
+      display: grid;
+      grid-template-columns: repeat(1, auto);
+    }
+
+    .container-4 ul{
+      display: flex;
+      /* border: 1px red solid; */
+      flex-direction: column;
+      justify-content: normal;
+      align-items: flex-start;
+    }
+
+    .btn1, .btn2, .btn3, .btn4 {
+      font-size: 1.0rem;
+    }
   }
 
-  .container-3 #menu{
-
-
-  }
-  .container-3 #menu ul li a {
-    display: flex;
-    flex-direction: row-reverse;
-    list-style: none;
-    text-decoration: none;
-  }
-
-  .btn1, .btn2, .btn3, .btn4 {
-    font-size: 0.7rem;
-  }
 }
