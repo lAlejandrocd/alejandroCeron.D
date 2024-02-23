@@ -35,20 +35,45 @@ body{
 
 .header-section{
   display: grid;
-  grid-template-columns: repeat(2,auto);
+  grid-template-columns: repeat(2,1fr);
   align-items: center;
 }
 
 
 #title{
-  font-size: 3.9rem;
+  font-size: 3.4rem;
   color: var(--black);
   font-family: 'iA Writer Mono', monospace;
 }
 
+#lastName{
+  font-family: 'iA Writer Mono', monospace;
+  font-size: 3.4rem;
+  font-style: italic;
+  color: var(--black);
+  text-align: left;
+  font-weight: bold;
+  animation: typing 2s steps(12), blink .5s step-end infinite alternate;
+  border-right: 5px solid var(--black);
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+@keyframes typing {
+  from{
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
 #sub-title{
   font-family: 'iA Writer Mono', monospace;
-  font-size: 2.0rem;
+  font-size: 1.8rem;
   font-style: italic;
   color: var(--gray);
   text-align: left;
@@ -145,6 +170,8 @@ img{
 .footer-content{
   display: flex;
   justify-content: center;
+  padding: 10px;
+  column-gap: 8px;
 }
 
 .text-content{
@@ -161,9 +188,13 @@ img{
   height: 40px;
 }
 
-#textName{
+#logo-cv{
+  width: 40px;
+  height: 40px;
+}
 
-  font-size: 1.5rem;
+#textName{
+  font-size: 1.4rem;
   font-family: 'iA Writer Mono', monospace;
 }
 

@@ -1,22 +1,29 @@
 {
-  "name": "alejandroceron.d",
-  "version": "1.0.0",
-  "description": "website",
+  "name": "alejandroceron-d",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lAlejandrocd/alejandroCeron.D.git"
   },
-  "author": "Alejandro ceron delgado",
+  "author": "Alejandro Ceron Delgado",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lAlejandrocd/alejandroCeron.D/issues"
   },
   "homepage": "https://github.com/lAlejandrocd/alejandroCeron.D#readme",
   "dependencies": {
-    "@fontsource/ia-writer-mono": "^5.0.7"
+    "@fontsource/ia-writer-mono": "^5.0.7",
+    "typed.js": "^2.1.0"
+  },
+  "devDependencies": {
+    "vite": "^5.1.4"
   }
 }
