@@ -1,13 +1,14 @@
-html{
+html {
   box-sizing: border-box;
 }
- *,
- *::after,
- *::before {
+
+*,
+*::after,
+*::before {
   box-sizing: inherit;
 }
 
-:root{
+:root {
   --background: #dadbdce3;
   --black: #000000;
   --gray: #a4a4a4;
@@ -16,51 +17,54 @@ html{
   --blue: #84848d;
 }
 
-body{
+body {
   background-color: var(--background);
   width: 100%;
   margin: 0px;
   padding: 0px;
 }
+
 /*
 .container{
   max-width: 650px;
   margin: 60px auto;
 } */
 
-.container{
+.container {
   width: 650px;
   margin: auto;
 }
 
-.header-section{
+.header-section {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(1, 1fr);
   align-items: center;
 }
 
 
-#title{
+#title {
   font-size: 3.4rem;
   color: var(--black);
   font-family: 'iA Writer Mono', monospace;
 }
 
-#lastName{
+#lastName {
   font-family: 'iA Writer Mono', monospace;
   font-size: 3.4rem;
   font-style: italic;
   color: var(--black);
   text-align: left;
   font-weight: bold;
-  animation: typing 2s steps(12), blink .5s step-end infinite alternate;
-  border-right: 5px solid var(--black);
+  border-right: 4px solid var(--black);
   margin-bottom: 0;
+  width: 12ch;
   white-space: nowrap;
+  animation: typing 2s steps(12), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
 }
 
 @keyframes typing {
-  from{
+  from {
     width: 0;
   }
 }
@@ -71,7 +75,7 @@ body{
   }
 }
 
-#sub-title{
+#sub-title {
   font-family: 'iA Writer Mono', monospace;
   font-size: 1.8rem;
   font-style: italic;
@@ -79,7 +83,7 @@ body{
   text-align: left;
 }
 
-img{
+img {
   width: 200px;
   height: 200px;
   border-radius: 200px;
@@ -87,7 +91,7 @@ img{
   margin: auto;
 }
 
-.container-4 ul{
+.container-4 ul {
   text-decoration: none;
   list-style: none;
   display: flex;
@@ -96,7 +100,7 @@ img{
 
 }
 
-.links{
+.links {
   margin: 20px;
   padding: 0px 12px 0px 0px;
   display: flex;
@@ -104,7 +108,7 @@ img{
   color: var(--black);
 }
 
-.btn1{
+.btn1 {
   font-family: 'iA Writer Mono', monospace;
   text-decoration-thickness: 0.3ex;
   text-underline-offset: 0.3ex;
@@ -112,7 +116,7 @@ img{
   cursor: pointer;
 }
 
-.btn2{
+.btn2 {
   font-family: 'iA Writer Mono', monospace;
   text-decoration-thickness: 0.3ex;
   text-underline-offset: 0.3ex;
@@ -120,7 +124,7 @@ img{
   cursor: pointer;
 }
 
-.btn3{
+.btn3 {
   font-family: 'iA Writer Mono', monospace;
   text-decoration-thickness: 0.3ex;
   text-underline-offset: 0.3ex;
@@ -128,7 +132,7 @@ img{
   cursor: pointer;
 }
 
-.btn4{
+.btn4 {
   font-family: 'iA Writer Mono', monospace;
   text-decoration-thickness: 0.3ex;
   text-underline-offset: 0.3ex;
@@ -136,24 +140,24 @@ img{
   cursor: pointer;
 }
 
-.btn1:hover{
+.btn1:hover {
   text-decoration-color: var(--black);
 }
 
-.btn2:hover{
+.btn2:hover {
   text-decoration-color: var(--blue);
 }
 
-.btn3:hover{
+.btn3:hover {
   text-decoration-color: var(--black);
 }
 
-.btn4:hover{
+.btn4:hover {
   text-decoration-color: var(--blue);
 }
 
 /* Texto párrafo. */
-.container-5 p{
+.container-5 p {
   font-family: 'iA Writer Mono', monospace;
   font-size: 20px;
   text-align: justify;
@@ -161,39 +165,39 @@ img{
   line-height: 1.6;
 }
 
-.footer{
+.footer {
   margin: auto;
   text-align: center;
   width: 100%;
 }
 
-.footer-content{
+.footer-content {
   display: flex;
   justify-content: center;
   padding: 10px;
   column-gap: 8px;
 }
 
-.text-content{
+.text-content {
   padding: 10px;
 }
 
-#logo-github{
+#logo-github {
   width: 40px;
   height: 40px;
 }
 
-#logo-linkedin{
+#logo-linkedin {
   width: 40px;
   height: 40px;
 }
 
-#logo-cv{
+#logo-cv {
   width: 40px;
   height: 40px;
 }
 
-#textName{
+#textName {
   font-size: 1.4rem;
   font-family: 'iA Writer Mono', monospace;
 }
@@ -201,26 +205,26 @@ img{
 
 /* Tablets responsive */
 @media screen and (max-width:600px) {
-  body{
+  body {
     /* background-color: var(--yellow); */
 
-    .container{
+    .container {
       width: 90%;
       margin: auto;
     }
 
-    img{
+    img {
       width: 160px;
       height: 160px;
       margin: auto;
     }
 
-    .header-section{
+    .header-section {
       display: grid;
       grid-template-columns: repeat(1, auto);
     }
 
-    .container-4 ul{
+    .container-4 ul {
       display: flex;
       /* border: 1px red solid; */
       flex-direction: column;
@@ -228,7 +232,10 @@ img{
       align-items: flex-start;
     }
 
-    .btn1, .btn2, .btn3, .btn4 {
+    .btn1,
+    .btn2,
+    .btn3,
+    .btn4 {
       font-size: 1.0rem;
     }
   }
