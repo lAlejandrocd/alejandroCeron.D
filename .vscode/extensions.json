@@ -6,5 +6,8 @@
     "dbaeumer.vscode-eslint",
     "fataldesign.eventlistener-intellisense",
     "kisstkondoros.vscode-gutter-preview",
+    "mhutchie.git-graph",
+    "miguelsolorio.fluent-icons",
+    "tal7aouy.icons",
   ]
 }
