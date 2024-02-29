@@ -26,7 +26,8 @@ body {
 
 .container {
   width: 700px;
-  margin: auto;
+  max-width: 100%;
+  margin: 30px auto;
   padding: 10px;
 }
 
@@ -62,7 +63,7 @@ img {
   color: var(--black);
   text-align: center;
   font-weight: bold;
-  border-right: 4px solid var(--black);
+  border-right: 2px solid var(--black);
   width: 24ch;
   white-space: nowrap;
   animation: typing 2s steps(12), blink 0.5s infinite step-end alternate;
@@ -83,8 +84,9 @@ img {
   text-decoration: none;
   list-style: none;
   display: flex;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
 }
 
 .links {
@@ -95,53 +97,28 @@ img {
   color: var(--black);
 }
 
-.btn1 {
-  font-family: 'iA Writer Mono', monospace;
-  text-decoration-thickness: 0.3ex;
-  text-underline-offset: 0.3ex;
-  text-decoration-color: var(--blue);
-  cursor: pointer;
-}
-
-.btn2 {
-  font-family: 'iA Writer Mono', monospace;
-  text-decoration-thickness: 0.3ex;
-  text-underline-offset: 0.3ex;
-  text-decoration-color: var(--black);
-  cursor: pointer;
-}
-
-.btn3 {
-  font-family: 'iA Writer Mono', monospace;
-  text-decoration-thickness: 0.3ex;
-  text-underline-offset: 0.3ex;
-  text-decoration-color: var(--blue);
-  cursor: pointer;
-}
-
+.btn1,
+.btn2,
+.btn3,
 .btn4 {
   font-family: 'iA Writer Mono', monospace;
-  text-decoration-thickness: 0.3ex;
-  text-underline-offset: 0.3ex;
+  text-decoration-thickness: 0.2ex;
+  text-underline-offset: 0.5ex;
   text-decoration-color: var(--black);
   cursor: pointer;
+  color: var(--gray);
 }
 
-.btn1:hover {
-  text-decoration-color: var(--black);
-}
-
-.btn2:hover {
-  text-decoration-color: var(--blue);
-}
-
+.btn1:hover,
 .btn3:hover {
   text-decoration-color: var(--black);
 }
 
+.btn2:hover,
 .btn4:hover {
-  text-decoration-color: var(--blue);
+  text-decoration-color: var(--pink);
 }
+
 
 /* Texto párrafo. */
 .container-5 p {
@@ -149,8 +126,8 @@ img {
   font-size: 20px;
   text-align: justify;
   /* separación de texto */
-  line-height: 1.6;
-  padding-bottom: 8px;
+  line-height: 25px;
+
 }
 
 .separator {
@@ -163,7 +140,6 @@ img {
 }
 
 .footer {
-  margin: auto;
   text-align: center;
 }
 
@@ -208,38 +184,94 @@ img {
 /* Tablets responsive */
 @media screen and (max-width:600px) {
   body {
-    /* background-color: var(--yellow); */
-
-    .container {
-      width: 90%;
-      margin: auto;
-    }
-
-    img {
-      width: 160px;
-      height: 160px;
-      margin: auto;
-    }
-
-    .header-section {
-      display: grid;
-      grid-template-columns: repeat(1, auto);
-    }
-
-    .container-4 ul {
-      display: flex;
-      /* border: 1px red solid; */
-      flex-direction: column;
-      justify-content: normal;
-      align-items: flex-start;
-    }
-
-    .btn1,
-    .btn2,
-    .btn3,
-    .btn4 {
-      font-size: 1.0rem;
-    }
+    background-color: var(--yellow);
+    width: 100%;
   }
 
+  .container {
+    width: 600px;
+    max-width: 100%;
+    margin: 30px auto;
+  }
+
+  img {
+    width: 180px;
+    height: 180px;
+
+  }
+
+  .profile-photo {
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+  }
+
+  .header-section {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    margin: auto;
+
+  }
+
+  #title,
+  #sub-title {
+    font-size: 1.5rem;
+    ;
+  }
+
+  .container-4 ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .btn1,
+  .btn2,
+  .btn3,
+  .btn4 {
+    font-size: 1.0rem;
+  }
+
+  .container-5 p {
+    font-family: 'iA Writer Mono', monospace;
+    font-size: 15px;
+    text-align: justify;
+    /* separación de texto */
+    line-height: 1.6;
+
+  }
+
+
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    background-color: var(--pink);
+    padding: 0;
+    margin: 0;
+  }
+
+  .container {
+    width: 600px;
+    max-width: 100%;
+    margin: 30px auto;
+  }
+
+  .header-section {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .container-5 {
+    border: 1px solid var(--black);
+  }
+
+  .container-5 p {
+    font-family: 'iA Writer Mono', monospace;
+    font-size: 14px;
+    text-align: justify;
+    /* separación de texto */
+    line-height: 13px;
+  }
 }
