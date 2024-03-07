@@ -20,8 +20,7 @@
   },
   "homepage": "https://github.com/lAlejandrocd/alejandroCeron.D#readme",
   "dependencies": {
-    "@fontsource/ia-writer-mono": "^5.0.7",
-    "typed.js": "^2.1.0"
+    "@fontsource/ia-writer-mono": "^5.0.7"
   },
   "devDependencies": {
     "vite": "^5.1.4"
