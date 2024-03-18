@@ -6,6 +6,8 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
 }
 
 :root {
@@ -61,10 +63,7 @@ img {
   color: var(--black);
   font-family: 'iA Writer Mono', monospace;
   font-style: italic;
-  color: var(--black);
-  text-align: center;
   font-weight: bold;
-  border-right: 2px solid var(--black);
   width: 24ch;
   white-space: nowrap;
   animation: typing 2s steps(12), blink 0.5s infinite step-end alternate;
@@ -202,25 +201,40 @@ img {
   }
 }
 
-
-
 /* Tablets responsive */
 @media only screen and (max-width:600px) {
   body {
     background-color: var(--yellow);
     width: 100%;
-  }
-
-  .container {
-    width: 600px;
     max-width: 100%;
-    margin: 30px auto;
+
   }
 
+  .nav__toggle {
+    position: relative;
+    cursor: pointer;
+    margin: 0rem;
+  }
 
   .container-4 li {
     display: none;
     list-style-type: none;
+  }
+
+  .container-4 {
+    flex-direction: row;
+    display: flex;
+  }
+
+  .nav__menu {
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav__menu:last-child {
+    justify-content: center;
   }
 
   /* mostrar svg hamburger */
@@ -229,47 +243,44 @@ img {
     cursor: pointer;
   }
 
-  .container-4 {
-    flex-direction: column;
-    display: flex;
-    justify-content: start;
-  }
-
-  .nav__checkbox:checked~.nav__toggle li {
+  #nav__checkbox:checked~.container-4 li {
     display: block;
   }
 
-  .nav__checkbox:checked~.nav__toggle .close {
-    display: block;
-  }
-
-  .nav__checkbox:checked+label {
-    color: red;
-  }
-
-  .nav__checkbox:checked~.nav__toggle .open {
+  #nav__checkbox:checked~.nav__toggle .menu {
     display: none;
+  }
+
+  #nav__checkbox:checked~.nav__toggle .close {
+    display: block;
   }
 
 
   .profile-photo {
-    padding: 10px;
+    padding: 0px;
     justify-content: center;
     align-items: center;
-    margin: 30px auto;
+    margin: 10px auto
+  }
+
+  .profile-photo img {
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    max-width: 100%;
   }
 
   .header-section {
     display: grid;
     grid-template-columns: repeat(1, auto);
-    margin: auto;
-
+    margin: 10px auto;
   }
 
   #title,
   #sub-title {
     font-size: 1.5rem;
-    ;
+    padding: 5px;
+    margin: 10px;
   }
 
   .btn1,
