@@ -11,3 +11,7 @@ Los datos salen de la base de datos personal y se actualiza con los datos de git
 ## Requerimientos
 
 Project details: requerimiento para comentar una información previa de cada proyecto que hago.
+
+## Install dependencies
+
+Normalize.css

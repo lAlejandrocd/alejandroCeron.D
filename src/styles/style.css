@@ -90,6 +90,26 @@ img {
   justify-content: space-between;
 }
 
+/* Iconos SVG  */
+.nav__toggle #openMenu,
+#closeMenu {
+  width: 30px;
+  height: 100px;
+}
+
+/* ocultar checkbox */
+#nav__checkbox {
+  display: none;
+}
+
+
+
+/* ocultar svg de closeMenu y openMenu */
+.nav__toggle .close,
+.menu {
+  display: none;
+}
+
 .links {
   margin: 20px;
   padding: 0px 12px 0px 0px;
@@ -182,8 +202,10 @@ img {
   }
 }
 
+
+
 /* Tablets responsive */
-@media screen and (max-width:600px) {
+@media only screen and (max-width:600px) {
   body {
     background-color: var(--yellow);
     width: 100%;
@@ -195,11 +217,40 @@ img {
     margin: 30px auto;
   }
 
-  img {
-    width: 180px;
-    height: 180px;
 
+  .container-4 li {
+    display: none;
+    list-style-type: none;
   }
+
+  /* mostrar svg hamburger */
+  .nav__toggle .menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .container-4 {
+    flex-direction: column;
+    display: flex;
+    justify-content: start;
+  }
+
+  .nav__checkbox:checked~.nav__toggle li {
+    display: block;
+  }
+
+  .nav__checkbox:checked~.nav__toggle .close {
+    display: block;
+  }
+
+  .nav__checkbox:checked+label {
+    color: red;
+  }
+
+  .nav__checkbox:checked~.nav__toggle .open {
+    display: none;
+  }
+
 
   .profile-photo {
     padding: 10px;
@@ -221,12 +272,6 @@ img {
     ;
   }
 
-  .container-4 ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-  }
-
   .btn1,
   .btn2,
   .btn3,
@@ -242,7 +287,6 @@ img {
     line-height: 1.6;
 
   }
-
 
 }
 
