@@ -224,8 +224,9 @@ img {
   }
 
   .container-4 li {
-    display: block;
+    display: none;
     list-style-type: none;
+
   }
 
   .nav__menu {
@@ -247,15 +248,12 @@ img {
   .nav__toggle .menu {
     display: block;
     cursor: pointer;
-    position: absolute;
+    position: relative;
   }
-
-
 
   #nav__checkbox:checked~.container-4 li {
     display: block;
-    /* position: relative;
-    margin-left: 60px; */
+    position: relative;
   }
 
   #nav__checkbox:checked~.nav__toggle .menu {
@@ -264,7 +262,10 @@ img {
 
   #nav__checkbox:checked~.nav__toggle .close {
     display: block;
+    position: absolute;
+
   }
+
 
 
   .profile-photo {
