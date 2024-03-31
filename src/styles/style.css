@@ -266,8 +266,6 @@ img {
 
   }
 
-
-
   .profile-photo {
     padding: 0px;
     justify-content: center;
@@ -308,7 +306,6 @@ img {
     text-align: justify;
     /* separación de texto */
     line-height: 1.6;
-    padding-top: 70px;
     position: relative;
   }
 
