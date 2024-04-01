@@ -59,7 +59,7 @@ img {
 }
 
 #title {
-  font-size: 5vmin;
+  font-size: 203%;
   color: var(--black);
   font-family: 'iA Writer Mono', monospace;
   font-style: italic;
@@ -68,6 +68,7 @@ img {
   white-space: nowrap;
   animation: typing 2s steps(12), blink 0.5s infinite step-end alternate;
   overflow: hidden;
+
 }
 
 
@@ -235,7 +236,6 @@ img {
     flex-wrap: wrap;
     flex-direction: row-reverse;
     position: relative;
-    margin: 0rem;
     left: 20px;
     top: 10px;
   }
