@@ -19,6 +19,8 @@ html {
   --blue: #84848d;
 }
 
+
+
 body {
   background-color: var(--background);
   width: 100%;
@@ -213,15 +215,20 @@ img {
 
   .nav__toggle {
     cursor: pointer;
-    margin: 0rem;
+    margin: 0 1rem;
     padding: 0px;
     left: 20px;
-    top: 20px;
+    top: 180px;
+    position: absolute;
   }
 
   .container-4 {
     flex-direction: row;
     top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
   }
 
   .container-4 li {
@@ -231,13 +238,9 @@ img {
   }
 
   .nav__menu {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
     position: relative;
-    left: 20px;
-    top: 10px;
+    top: 0px;
+    width: 90%;
   }
 
   .nav__menu:last-child {
@@ -270,7 +273,7 @@ img {
     padding: 0px;
     justify-content: center;
     align-items: center;
-    margin: 10px auto
+    margin: 10px auto;
   }
 
   .profile-photo img {
@@ -290,7 +293,7 @@ img {
   #sub-title {
     font-size: 1.5rem;
     padding: 5px;
-    margin: 10px;
+    margin-top: 0px;
   }
 
   .btn1,
@@ -307,10 +310,13 @@ img {
     /* separación de texto */
     line-height: 1.6;
     position: relative;
+    margin-top: 30px;
   }
 
 }
 
+
+/* Mobile responsive */
 @media screen and (max-width: 500px) {
   body {
     background-color: var(--pink);
