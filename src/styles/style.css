@@ -23,23 +23,56 @@ html {
 
 body {
   background-color: var(--background);
-  width: 100%;
   margin-top: 0px;
   padding: 0px;
   font-family: "iA Writer Mono";
 }
 
 .container {
-  width: 700px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 700px;
   margin: 5px auto;
+  border: 1px solid var(--black);
 }
 
 .header-section {
   display: grid;
   justify-items: start;
   justify-content: normal;
+  width: 100%;
+  grid-template-columns: 230px 1fr;
+  border: 1px solid var(--black);
 }
+
+
+
+#title {
+  position: absolute;
+  padding-left: 3px;
+  width: 24ch;
+  font-size: 200%;
+  color: var(--black);
+  font-family: 'iA Writer Mono', monospace;
+  font-style: italic;
+  font-weight: bold;
+  white-space: nowrap;
+  animation: typing 2s steps(12), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+}
+
+
+#sub-title {
+  position: relative;
+  /* border: 3px solid var(--black); */
+  margin-top: 45px;
+  font-family: 'iA Writer Mono', monospace;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--gray);
+  text-align: left;
+}
+
+
 
 
 .profile-photo {
@@ -52,34 +85,20 @@ img {
   border-radius: 200px;
 }
 
-.title,
-.rol,
+
 .icons {
-  grid-column-start: 2;
-  grid-column-end: 3;
-}
-
-#title {
-  font-size: 203%;
-  color: var(--black);
-  font-family: 'iA Writer Mono', monospace;
-  font-style: italic;
-  font-weight: bold;
-  width: 24ch;
-  white-space: nowrap;
-  animation: typing 2s steps(12), blink 0.5s infinite step-end alternate;
-  overflow: hidden;
-
+  margin-top: 8px;
+  /* border: 1px solid var(--black); */
+  display: flex;
+  justify-content: space-evenly;
 }
 
 
-#sub-title {
-  font-family: 'iA Writer Mono', monospace;
-  font-size: 2rem;
-  font-style: italic;
-  color: var(--gray);
-  text-align: left;
-}
+
+
+
+
+#sub-title {}
 
 
 .container-4 ul {
