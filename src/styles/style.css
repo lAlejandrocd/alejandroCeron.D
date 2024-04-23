@@ -1,11 +1,8 @@
-html {
-  box-sizing: border-box;
-}
-
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
+  /* box-sizing: inherit; */
+  box-sizing: border-box;
   margin: 0px;
   padding: 0px;
 }
@@ -29,82 +26,110 @@ body {
 }
 
 .container {
-  width: 100%;
-  max-width: 700px;
-  margin: 5px auto;
+  width: 700px;
+  margin: 0 auto;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "header-section header-section header-section"
+    "nav nav nav"
+    ". . .";
   border: 1px solid var(--black);
 }
 
 .header-section {
   display: grid;
-  justify-items: start;
-  justify-content: normal;
-  width: 100%;
-  grid-template-columns: 230px 1fr;
-  border: 1px solid var(--black);
+  /* definimos a que area pertenece */
+  grid-area: header-section;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.2fr 0.2fr 0.3fr;
+  grid-template-areas:
+    "profile-photo title title"
+    "profile-photo subTitle subTitle "
+    "profile-photo icons icons";
+
 }
-
-
-
-#title {
-  position: absolute;
-  padding-left: 3px;
-  width: 24ch;
-  font-size: 200%;
-  color: var(--black);
-  font-family: 'iA Writer Mono', monospace;
-  font-style: italic;
-  font-weight: bold;
-  white-space: nowrap;
-  animation: typing 2s steps(12), blink 0.5s infinite step-end alternate;
-  overflow: hidden;
-}
-
-
-#sub-title {
-  position: relative;
-  /* border: 3px solid var(--black); */
-  margin-top: 45px;
-  font-family: 'iA Writer Mono', monospace;
-  font-size: 1.5rem;
-  font-style: italic;
-  color: var(--gray);
-  text-align: left;
-}
-
-
-
 
 .profile-photo {
-  padding: 10px;
+  grid-area: profile-photo;
+  padding: 5px;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 img {
-  width: 200px;
-  height: 200px;
-  border-radius: 200px;
+  width: 170px;
+  height: 170px;
+  border-radius: 170px;
 }
 
+.title {
+  grid-area: title;
+  margin-top: 1px;
+}
+
+#title-1 {
+  font-size: 2.1rem;
+  width: 26ch;
+  font-family: 'iA Writer Mono', monospace;
+  font-style: italic;
+  animation: typing 6s infinite steps(12), blink 0.5s infinite step-end alternate;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: bold;
+  padding-left: 3px;
+  margin-top: 1px;
+}
+
+.subTitle {
+  grid-area: subTitle;
+}
+
+#sub-title {
+  font-size: 1.7rem;
+  font-family: 'iA Writer Mono', monospace;
+  font-style: italic;
+  color: var(--gray);
+  text-align: left;
+  margin-top: 10px;
+}
 
 .icons {
-  margin-top: 8px;
-  /* border: 1px solid var(--black); */
-  display: flex;
-  justify-content: space-evenly;
+  grid-area: icons;
+  margin: 0 auto;
 }
 
+/* Icons */
+#logo-github,
+#logo-linkedin,
+#logo-cv {
+  margin-top: 5px;
+  width: 40px;
+  height: 40px;
+  margin: 8px;
+}
+
+.nav {
+  grid-area: nav;
+  grid-auto-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.3fr 0.3fr 0.3fr;
+  background-color: var(--pink);
+}
+
+.nav .container-4 ul {
+  display: flex;
 
 
-
-
-
-#sub-title {}
+}
 
 
 .container-4 ul {
   text-decoration: none;
   list-style: none;
-  display: flex;
   margin: 0;
   padding: 0;
   justify-content: space-between;
@@ -133,8 +158,6 @@ img {
 .links {
   margin: 20px;
   padding: 0px 12px 0px 0px;
-  display: flex;
-  justify-content: space-between;
   color: var(--black);
 }
 
@@ -185,22 +208,13 @@ img {
 }
 
 .footer-content {
-  display: flex;
+
   justify-content: center;
   column-gap: 8px;
 }
 
 .text-content {
   padding: 10px;
-}
-
-
-/* Icons */
-#logo-github,
-#logo-linkedin,
-#logo-cv {
-  width: 40px;
-  height: 40px;
 }
 
 
@@ -226,9 +240,11 @@ img {
 @media only screen and (max-width:600px) {
   body {
     background-color: var(--yellow);
-    width: 100%;
-    max-width: 100%;
+    width:
+  }
 
+  .container {
+    width: 100%;
   }
 
   .nav__toggle {
@@ -239,11 +255,13 @@ img {
     position: absolute;
   }
 
-  .container-4 {
+
+
+  */
+  /* .container-4 {
+
     flex-direction: row;
     top: 30px;
-    display: flex;
-    justify-content: center;
     flex-wrap: wrap;
     flex-direction: row-reverse;
   }
@@ -252,9 +270,9 @@ img {
     display: none;
     list-style-type: none;
 
-  }
+  } */
 
-  .nav__menu {
+  /* .nav__menu {
     position: relative;
     top: 0px;
     width: 90%;
@@ -262,16 +280,16 @@ img {
 
   .nav__menu:last-child {
     justify-content: center;
-  }
+  } */
 
   /* mostrar svg hamburger */
-  .nav__toggle .menu {
+  /* .nav__toggle .menu {
     display: block;
     cursor: pointer;
     position: relative;
-  }
+  } */
 
-  #nav__checkbox:checked~.container-4 li {
+  /* #nav__checkbox:checked~.container-4 li {
     display: block;
     position: relative;
   }
@@ -284,58 +302,50 @@ img {
     display: block;
     position: absolute;
 
-  }
+  } */
 
-  .profile-photo {
+  /* .profile-photo {
     padding: 0px;
-    justify-content: center;
     align-items: center;
     margin: 10px auto;
-  }
+  } */
 
-  .profile-photo img {
+  /* .profile-photo img {
     width: 150px;
     height: 150px;
     margin: auto;
     max-width: 100%;
-  }
+  } */
 
-  .header-section {
-    display: grid;
-    grid-template-columns: repeat(1, auto);
+  /* .header-section {
+
     margin: 10px auto;
-  }
+  } */
 
-  #title,
-  #sub-title {
-    font-size: 1.5rem;
-    padding: 5px;
-    margin-top: 0px;
-  }
 
-  .btn1,
+  /* .btn1,
   .btn2,
   .btn3,
   .btn4 {
     font-size: 1.0rem;
-  }
+  } */
 
-  .container-5 p {
+  /* .container-5 p {
     font-family: 'iA Writer Mono', monospace;
     font-size: 15px;
-    text-align: justify;
-    /* separación de texto */
-    line-height: 1.6;
+    text-align: justify; */
+  /* separación de texto */
+  /* line-height: 1.6;
     position: relative;
-    margin-top: 30px;
-  }
+    margin-top: 30px; */
+  /* } */
 
-}
+  /* } */
 
 
-/* Mobile responsive */
-@media screen and (max-width: 500px) {
-  body {
+  /* Mobile responsive */
+  /* @media screen and (max-width: 500px) { */
+  /* body {
     background-color: var(--pink);
     padding: 0;
     margin: 0;
@@ -351,16 +361,15 @@ img {
     display: flex;
     flex-wrap: wrap;
   }
-
-  .container-5 {
+  /* .container-5 {
     border: 1px solid var(--black);
-  }
+  } */
 
-  .container-5 p {
+  /* .container-5 p {
     font-family: 'iA Writer Mono', monospace;
     font-size: 14px;
-    text-align: justify;
-    /* separación de texto */
-    line-height: 13px;
-  }
+    text-align: justify; */
+  /* separación de texto */
+  /* line-height: 13px;
+  } */
 }
