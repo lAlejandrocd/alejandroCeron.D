@@ -28,15 +28,15 @@ body {
 .container {
   width: 700px;
   margin: 0 auto;
+  margin-top: 10px;
   max-width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   grid-template-areas:
     "header-section header-section header-section"
-    "nav nav nav"
-    ". . .";
-  border: 1px solid var(--black);
+    "container-4 container-4 container-4"
+    "container-5 container-5 container-5";
 }
 
 .header-section {
@@ -112,53 +112,28 @@ img {
   margin: 8px;
 }
 
-.nav {
-  grid-area: nav;
-  grid-auto-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.3fr 0.3fr 0.3fr;
-  background-color: var(--pink);
+.container-4 {
+  background-color: var(--yellow);
+  display: grid;
+  grid-area: container-4;
+  grid-template-rows: max-content;
+  margin-top: 35px;
 }
 
-.nav .container-4 ul {
+
+
+.nav__menuElements {
   display: flex;
-
-
-}
-
-
-.container-4 ul {
   text-decoration: none;
   list-style: none;
-  margin: 0;
   padding: 0;
-  justify-content: space-between;
-}
-
-/* Iconos SVG  */
-.nav__toggle #openMenu,
-#closeMenu {
-  width: 30px;
-  height: 100px;
-}
-
-/* ocultar checkbox */
-#nav__checkbox {
-  display: none;
-}
-
-
-
-/* ocultar svg de closeMenu y openMenu */
-.nav__toggle .close,
-.menu {
-  display: none;
+  justify-content: center;
 }
 
 .links {
-  margin: 20px;
-  padding: 0px 12px 0px 0px;
+  margin-left: 15px;
   color: var(--black);
+  /* align-items: center; */
 }
 
 .btn1,
@@ -183,6 +158,29 @@ img {
   text-decoration-color: var(--pink);
 }
 
+/* Iconos SVG  */
+.nav__toggle #openMenu,
+#closeMenu {
+  width: 30px;
+  height: 100px;
+}
+
+/* ocultar checkbox */
+#nav__checkbox {
+  display: none;
+}
+
+/* ocultar svg de closeMenu y openMenu */
+.nav__toggle .close,
+.menu {
+  display: none;
+}
+
+.container-5 {
+  display: grid;
+  grid-area: container-5;
+  margin-top: 10px;
+}
 
 /* Texto párrafo. */
 .container-5 p {
@@ -192,15 +190,16 @@ img {
   /* separación de texto */
   line-height: 25px;
 
+
 }
 
 .separator {
   position: relative;
-  margin-top: 5px;
+  margin-top: 20px;
   height: 0;
   width: 15vmin;
   border-top: 3px solid black;
-  padding-top: 8px;
+  margin: 0 auto;
 }
 
 .footer {
