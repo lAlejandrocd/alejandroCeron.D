@@ -1,7 +1,6 @@
 *,
 *::after,
 *::before {
-  /* box-sizing: inherit; */
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
@@ -14,9 +13,10 @@
   --yellow: #ffff00;
   --pink: #eb4888;
   --blue: #84848d;
+  --color1: #8e8e96;
+  --color2: #2b415e;
+  --color3: #a2bdd1;
 }
-
-
 
 body {
   background-color: var(--background);
@@ -72,17 +72,62 @@ img {
 }
 
 #title-1 {
+  text-transform: uppercase;
   font-size: 2.1rem;
-  width: 26ch;
   font-family: 'iA Writer Mono', monospace;
-  font-style: italic;
-  animation: typing 6s infinite steps(12), blink 0.5s infinite step-end alternate;
-  overflow: hidden;
-  white-space: nowrap;
   font-weight: bold;
   padding-left: 3px;
   margin-top: 1px;
 }
+
+.title-world {
+  animation: color-animation 4s linear infinite;
+}
+
+.title-world-1 {
+  color: var(--color1);
+}
+
+.title-world-2 {
+  color: var(--color2);
+}
+
+.title-world-3 {
+  color: var(--pink);
+}
+
+/* Cambio de color al title */
+@keyframes color-animation {
+  0% {
+    color: var(--color2);
+  }
+
+  32% {
+    color: var(--color2);
+  }
+
+  33% {
+    color: var(--color1);
+  }
+
+  65% {
+    color: var(--color1);
+  }
+
+  66% {
+    color: var(--color3);
+  }
+
+  99% {
+    color: var(--color3);
+  }
+
+  100% {
+    color: var(--color1);
+  }
+}
+
+
 
 .subTitle {
   grid-area: subTitle;
@@ -113,7 +158,6 @@ img {
 }
 
 .container-4 {
-  background-color: var(--yellow);
   display: grid;
   grid-area: container-4;
   grid-template-rows: max-content;
@@ -127,13 +171,13 @@ img {
   text-decoration: none;
   list-style: none;
   padding: 0;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .links {
   margin-left: 15px;
   color: var(--black);
-  /* align-items: center; */
+  font-size: 100%;
 }
 
 .btn1,
@@ -189,8 +233,6 @@ img {
   text-align: justify;
   /* separación de texto */
   line-height: 25px;
-
-
 }
 
 .separator {
@@ -222,18 +264,7 @@ img {
   font-family: 'iA Writer Mono', monospace;
 }
 
-/* Efecto escritura título. */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
 
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
 
 /* Tablets responsive */
 @media only screen and (max-width:600px) {
