@@ -64,6 +64,7 @@ img {
   width: 170px;
   height: 170px;
   border-radius: 170px;
+  max-width: 100%;
 }
 
 .title {
@@ -162,6 +163,7 @@ img {
   grid-area: container-4;
   grid-template-rows: max-content;
   margin-top: 35px;
+
 }
 
 
@@ -170,14 +172,15 @@ img {
   display: flex;
   text-decoration: none;
   list-style: none;
-  padding: 0;
   justify-content: space-between;
+  max-width: 100%;
+  font-size: 2.8vh;
 }
 
 .links {
-  margin-left: 15px;
   color: var(--black);
-  font-size: 100%;
+
+  max-width: 100%;
 }
 
 .btn1,
@@ -262,6 +265,7 @@ img {
 #textName {
   font-size: 1.4rem;
   font-family: 'iA Writer Mono', monospace;
+  text-transform: uppercase;
 }
 
 
