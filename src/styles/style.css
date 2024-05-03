@@ -55,14 +55,16 @@ body {
 
 .profile-photo {
   grid-area: profile-photo;
-  padding: 5px;
+  padding: 2px;
   margin: 0 auto;
   max-width: 100%;
 }
 
 img {
-  width: 170px;
-  height: 170px;
+  width: 140px;
+  height: 140px;
+
+
   border-radius: 170px;
   max-width: 100%;
 }
@@ -155,32 +157,32 @@ img {
   margin-top: 5px;
   width: 40px;
   height: 40px;
-  margin: 8px;
+  padding-left: 10px;
 }
 
 .container-4 {
   display: grid;
   grid-area: container-4;
   grid-template-rows: max-content;
-  margin-top: 35px;
-
+  margin-top: 0px;
 }
 
 
 
 .nav__menuElements {
-  display: flex;
+  justify-content: space-between;
+  font-size: 3vh;
+}
+
+.itemsElements {
   text-decoration: none;
   list-style: none;
-  justify-content: space-between;
-  max-width: 100%;
-  font-size: 2.8vh;
+  display: flex;
 }
 
 .links {
   color: var(--black);
-
-  max-width: 100%;
+  width: 100%;
 }
 
 .btn1,
