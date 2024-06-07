@@ -169,7 +169,7 @@ img {
 /* ocultar checkbox e iconos svg  */
 #openMenu,
 #closeMenu,
-#nav__checkbox {
+#nav_checkbox {
   display: none;
 }
 
@@ -274,7 +274,6 @@ img {
 }
 
 
-
 /* Tablets responsive */
 /* @media only screen and (max-width:600px) { */
 @media (width <=550px) {
@@ -300,19 +299,19 @@ img {
     top: 30px;
     flex-wrap: wrap;
     flex-direction: row-reverse;
+
   }
 
-  .container-4 li {
+  .container-4 ul {
     display: none;
     list-style-type: none;
-
   }
 
 
   .nav__menuElements {
     position: relative;
     top: 0px;
-    width: 90%;
+    width: 100%;
   }
 
   .nav__menuElements:last-child {
@@ -326,18 +325,17 @@ img {
     position: relative;
   }
 
-  #nav__checkbox:checked~.container-4 ul .itemsElements li {
+  #nav_checkbox:checked~label.nav__toggle .close {
     display: block;
   }
 
-  /* #nav__checkbox:checked~.nav__toggle .menu {
-    display: none;
-  } */
-
-  #nav__checkbox:checked~.nav__toggle .close {
+  /* Por arreglar. */
+  #nav_checkbox:checked~*.container-4 {
     display: block;
-    position: absolute;
+  }
 
+  #nav_checkbox:checked~label.nav__toggle .menu {
+    display: none;
   }
 
   .profile-photo {
