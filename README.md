@@ -15,3 +15,8 @@ Project details: requerimiento para comentar una información previa de cada pro
 ## Install dependencies
 
 Normalize.css
+
+---
+
+> [!CAUTION]
+> Este repositorio se encuentra en desarrollo.

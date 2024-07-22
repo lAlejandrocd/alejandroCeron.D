@@ -18,18 +18,23 @@
   --color3: #a2bdd1;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background-color: var(--background);
   margin-top: 0px;
   padding: 0px;
   font-family: "iA Writer Mono";
+  height: 100%;
 }
 
 .container {
   width: 700px;
+  height: 100%;
   margin: 0 auto;
   margin-top: 10px;
-  max-width: 90%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -267,8 +272,8 @@ img {
 
 
 /* responsive */
-/* @media only screen and (max-width:600px) { */
-@media (width <=550px) {
+/* 34.375rem = 550px */
+@media (width <=34.375rem) {
   body {}
 
   .container {
