@@ -32,30 +32,32 @@ body {
 
 .container {
   width: 700px;
-  height: 100%;
   margin: 0 auto;
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
   grid-template-areas:
     "header-section header-section header-section"
     "container-4 container-4 container-4"
-    "container-5 container-5 container-5";
+    "container-5 container-5 container-5"
+    "separator separator separator"
+    "footer footer footer";
 }
 
 .header-section {
   display: grid;
+  height: 100%;
   /* definimos a que area pertenece */
   grid-area: header-section;
   grid-auto-rows: 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 0.2fr 0.3fr 0.3fr;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 30px auto;
   grid-template-areas:
     "profile-photo title title"
     "profile-photo subTitle subTitle "
     "profile-photo icons icons"
-    ". nav nav ";
+    /* ". nav nav "; */
 
 }
 
@@ -63,6 +65,7 @@ body {
   grid-area: profile-photo;
   padding: 2px;
   margin: 0 auto;
+  height: 100%;
 }
 
 img {
@@ -182,20 +185,21 @@ img {
   display: grid;
   grid-area: container-4;
   align-items: center;
-  /* width: 100%; */
-
+  width: 100%;
+  margin: 0 auto;
+  /* Hice la separación desde aca y no usando un padding. */
+  grid-template-rows: 10px 1fr 10px;
 }
 
 .nav__menuElements {
   justify-content: space-between;
-  font-size: 1.3em;
+  font-size: 1.3rem;
 }
 
 .itemsElements {
   text-decoration: none;
   list-style: none;
   display: flex;
-  padding: 10px;
 }
 
 .links {
@@ -235,23 +239,28 @@ img {
 /* Texto párrafo. */
 .container-5 p {
   font-family: 'iA Writer Mono', monospace;
-  font-size: 20px;
+  font-size: 1.4rem;
   text-align: justify;
   /* separación de texto */
-  line-height: 25px;
+  line-height: 1.8rem;
 }
 
 .separator {
+  display: grid;
+  grid-area: separator;
   position: relative;
   margin-top: 20px;
   height: 0;
   width: 15vmin;
   border-top: 3px solid black;
   margin: 0 auto;
+  /* padding-bottom: 20px; */
 }
 
 .footer {
   text-align: center;
+  display: grid;
+  grid-area: footer;
 }
 
 .footer-content {
@@ -270,24 +279,21 @@ img {
   text-transform: uppercase;
 }
 
-
 /* responsive */
 /* 34.375rem = 550px */
-@media (width <=34.375rem) {
-  body {}
-
+/* @media (width <=34.375rem) { */
+/* TODO:Cambiar posición de estos elementos. */
+@media (width <=29.25rem) {
   .container {
     width: 100%;
   }
 
-  .nav__toggle {
-    cursor: pointer;
-    left: 0px;
-    padding: 0px;
-    top: 0px;
-    position: absolute;
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 130px 100px 1fr auto;
   }
 
+  /* Menú */
   .container-4 {
     flex-direction: row;
     top: 30px;
@@ -295,10 +301,34 @@ img {
     flex-direction: row-reverse;
   }
 
+  /* TODO: cambiar posición de los elementos del header section */
+  .header-section {
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "profile-photo profile-photo icons"
+      "title title title"
+      "subTitle subTitle subTitle";
+    margin: 0;
+  }
+
+
+  .icons {
+    position: absolute;
+  }
+
+  /* Elementos del menú */
   ul.itemsElements {
     display: none;
     list-style-type: none;
 
+  }
+
+  /* Espacio donde se guardan los iconos */
+  .nav__toggle {
+    cursor: pointer;
+    left: 0px;
+    padding: 0px;
+    top: 0px;
+    position: absolute;
   }
 
   .nav__menuElements:last-child {
@@ -345,4 +375,6 @@ img {
   .btn4 {
     font-size: 1.0rem;
   }
+
+
 }
