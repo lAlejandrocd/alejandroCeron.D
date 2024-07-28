@@ -317,9 +317,8 @@ footer .separator {
   }
 
   .profile-photo img {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
+    width: 500px;
+    height: 200px;
   }
 
   .icons {
@@ -334,6 +333,14 @@ footer .separator {
     display: grid;
     grid-area: title;
     justify-items: center;
+  }
+
+  #title-1 {
+    font-size: 1.5rem;
+  }
+
+  #sub-title {
+    font-size: 1rem;
   }
 
   .subTitle {
@@ -396,6 +403,10 @@ footer .separator {
   .btn3,
   .btn4 {
     font-size: 1.0rem;
+  }
+
+  .container-5 p {
+    font-size: 1rem;
   }
 
 
