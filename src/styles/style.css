@@ -38,14 +38,13 @@ body {
   margin: 0 auto;
   margin-top: 10px;
   display: grid;
-  grid-template-rows: repeat(autofill, minmax(750px, 1fr));
+  grid-template-rows: auto 50px 1fr auto;
   grid-template-columns: repeat(2, minmax(100px, 1px));
   grid-template-areas: "header-section header-section header-section"
     "container-4 container-4 container-4"
     "container-5 container-5 container-5"
     "footer footer footer"
     "footer footer footer";
-  /* border: 1px solid white; */
 }
 
 .header-section {
@@ -81,7 +80,8 @@ img {
 
 }
 
-#title-1 {
+.title-1 {
+  /* Texto mayúscula */
   text-transform: uppercase;
   font-size: 2.1rem;
   font-family: 'iA Writer Mono', monospace;
@@ -91,52 +91,6 @@ img {
   color: var(--color1);
 }
 
-.title-world {
-  animation: color-animation 4s linear infinite;
-}
-
-.title-world-1 {
-  color: var(--color1);
-}
-
-.title-world-2 {
-  color: var(--color2);
-}
-
-.title-world-3 {
-  color: var(--pink);
-}
-
-/* Cambio de color al title */
-@keyframes color-animation {
-  0% {
-    color: var(--color2);
-  }
-
-  32% {
-    color: var(--color2);
-  }
-
-  33% {
-    color: var(--color1);
-  }
-
-  65% {
-    color: var(--color1);
-  }
-
-  66% {
-    color: var(--color3);
-  }
-
-  99% {
-    color: var(--color3);
-  }
-
-  100% {
-    color: var(--color1);
-  }
-}
 
 .subTitle {
   grid-area: subTitle;
@@ -290,11 +244,8 @@ footer .separator {
 @media (width <=550px) {
   .container {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
   }
-
-
 
   .header-section {
     display: grid;
@@ -408,6 +359,7 @@ footer .separator {
   .container-5 p {
     font-size: 1rem;
   }
+
 
 
 }
