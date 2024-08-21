@@ -145,14 +145,15 @@ img {
 }
 
 .nav__menuElements {
-  justify-content: space-between;
   font-size: 1.3rem;
+  width: 100%;
 }
 
 .itemsElements {
   text-decoration: none;
   list-style: none;
   display: flex;
+  justify-content: space-between;
 }
 
 .links {
@@ -173,10 +174,7 @@ img {
 }
 
 .btn1:hover,
-.btn3:hover {
-  text-decoration-color: var(--black);
-}
-
+.btn3:hover,
 .btn2:hover,
 .btn4:hover {
   text-decoration-color: var(--pink);
@@ -190,12 +188,17 @@ img {
 }
 
 /* Texto párrafo. */
-.container-5 p {
+.container-5 {
   font-family: 'iA Writer Mono', monospace;
   font-size: 1.4rem;
   text-align: justify;
   /* separación de texto */
   line-height: 1.8rem;
+  /* border: 1px solid white; */
+}
+
+#text {
+  padding: 10px;
 }
 
 .footer {
