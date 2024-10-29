@@ -21,9 +21,18 @@
           <h1 id="sub-title">Desarrollador Web Junior</h1>
         </div>
         <div class="icons">
-          <ion-icon name="logo-github" id="logo-github"></ion-icon>
-          <ion-icon name="document-attach-outline" id="logo-cv"></ion-icon>
-          <ion-icon name="logo-linkedin" id="logo-linkedin"></ion-icon>
+          <a href="">
+            <ion-icon name="logo-github" id="logo-github"></ion-icon>
+          </a>
+          <a href="" onclick="window.open('src/assets/pdf/cvAlejandroCeron.pdf')">
+            <ion-icon name="document-attach-outline" id="logo-cv"></ion-icon>
+          </a>
+
+          <a href="">
+            <ion-icon name="logo-linkedin" id="logo-linkedin"></ion-icon>
+            </ion-icon>
+          </a>
+
         </div>
       </main>
       <!-- icon Hamburger and list -->
@@ -33,14 +42,20 @@
           <img src="src/img/svg/openMenu.svg" alt="" id="openMenu" class="menu">
           <img src="src/img/svg/closeMenu.svg" alt="" id="closeMenu" class="close">
         </label>
-          <div class="nav__menuElements">
-            <ul class="itemsElements">
-              <li class="links"><a href="#" class="btn1 ">Links</a></li>
-              <li class="links"><a href="#" class="btn2 ">Proyectos</a></li>
-              <li class="links"><a href="#" class="btn3 ">Contacto</a></li>
-              <li class="links"><a href="#" class="btn4 ">Formación/Experiencia</a></li>
-            </ul>
-          </div>
+        <div class="nav__menuElements">
+          <ul class="itemsElements">
+            <li class="links">
+              <a href="#" class="btn1">Links</a></li>
+            <li class="links">
+              <a href="#" class="btn2">Proyectos</a></li>
+            <li class="links">
+              <a href="#" class="btn3">Contacto</a></li>
+            <li class="links">
+              <a href="#" class="btn4">Formación/Experiencia</a></li>
+            <li class="links">
+              <a href="#" class="btn5 ">Descargar CV</a></li>
+          </ul>
+        </div>
       </div>
       <div class="container-5">
       <p id="text">
@@ -58,7 +73,9 @@
       <div class="separator"></div>
       <div class="footer-content">
         <ion-icon name="logo-github" id="logo-github"></ion-icon>
-        <ion-icon name="document-attach-outline" id="logo-cv"></ion-icon>
+        <ion-icon name="document-attach-outline" id="logo-cv">
+          <button>value</button>
+        </ion-icon>
         <ion-icon name="logo-linkedin" id="logo-linkedin"></ion-icon>
       </div>
       <div class="text-content">
@@ -67,7 +84,7 @@
         </span>
       </div>
     </footer>
-  </div>
+    </div>
 
 
 
