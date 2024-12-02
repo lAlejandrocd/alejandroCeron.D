@@ -169,6 +169,12 @@ a {
   justify-content: space-between;
 }
 
+.itemsElements .links :hover {
+  /* Dibujamos Línea con efecto hover */
+  text-decoration-line: underline;
+  text-decoration-color: var(--pink);
+}
+
 .links {
   color: var(--black);
 }
@@ -305,8 +311,9 @@ footer .separator {
     justify-items: center;
   }
 
-  #title-1 {
+  .title-1 {
     font-size: 1.5rem;
+    text-align: center;
   }
 
   #sub-title {
@@ -346,7 +353,7 @@ footer .separator {
   .nav__menuElements {
     height: auto;
 
-    /* Esto es lo mismo que recurrir a
+    /* Esto es lo mismo que usar a
     .nav__menuElements:last-child
     */
     &:last-child {
@@ -384,16 +391,16 @@ footer .separator {
     font-size: 1.0rem;
   }
 
-  #text {
-    padding: 10px;
-    font-size: 2vh;
-  }
-
   .container-5 p {
     /* font-size: 1rem; */
     font-size: 1.3vh;
     margin-top: 0px;
     padding: 0px;
+  }
+
+  #text {
+    padding: 10px;
+    font-size: 2vh;
   }
 
 }
