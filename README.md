@@ -25,5 +25,5 @@ Normalize.**css**
 
 ## **Características**
 
-[ ] Implementar text truncate en la preview de la página cuando entregamos información previa del proyecto
+[ ] Implementar text truncate en la preview de la página cuando entregamos información previa del proyecto = referencia: https://codepen.io/MaruthiMohanReddy/pen/gVWOzK
 [ ] Implementar texto o párrafos desde JavaScript

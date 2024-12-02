@@ -30,9 +30,16 @@ body {
   font-family: "iA Writer Mono";
   height: 100%;
   color: var(--gray);
+
+  /* Estilos generales */
+  a {
+    text-decoration: none;
+    list-style: none;
+    color: var(--color3);
+  }
 }
 
-.container {
+.page1 {
   width: 750px;
   max-width: 100%;
   margin: 0 auto;
@@ -45,180 +52,164 @@ body {
     "container-5 container-5 container-5"
     "footer footer footer"
     "footer footer footer";
-}
 
-.header-section {
-  display: grid;
-  /* definimos a que area pertenece */
-  grid-area: header-section;
-  grid-template-rows: repeat(2, auto) 1fr;
-  grid-template-columns: auto repeat(2, 1fr);
-  grid-template-areas:
-    "profile-photo title title"
-    "profile-photo subTitle subTitle "
-    "profile-photo icons icons"
-    "nav nav nav ";
-  color: var(--color3);
-}
-
-.profile-photo {
-  grid-area: profile-photo;
-  padding: 0.5rem;
-  height: 100%;
-  /* Esto es igual a 200px */
-  width: 12.5rem;
-}
-
-img {
-  border-radius: 150px;
-  max-width: 100%;
-
-}
-
-#profile-photo {
-  width: 100%;
-  height: auto;
-}
-
-.title {
-  grid-area: title;
-  margin-top: 5px;
-
-}
-
-.title-1 {
-  /* Texto mayúscula */
-  text-transform: uppercase;
-  font-size: 2.1rem;
-  font-family: 'iA Writer Mono', monospace;
-  font-weight: bold;
-  padding-left: 3px;
-  margin-top: 1px;
-  color: var(--color1);
-}
+  .header-section {
+    display: grid;
+    /* Pertenece al area general del container */
+    grid-area: header-section;
+    grid-template-rows: repeat(2, auto) 1fr;
+    grid-template-columns: auto repeat(2, 1fr);
+    grid-template-areas:
+      "profile-photo title title"
+      "profile-photo subTitle subTitle "
+      "profile-photo icons icons"
+      "nav nav nav ";
+    color: var(--color3);
 
 
-.subTitle {
-  grid-area: subTitle;
-  padding-left: 20px;
-}
+    #profile-photo {
+      grid-area: profile-photo;
+      padding: 0.5rem;
+      height: auto;
+      /* Esto es igual a 200px */
+      width: 12.5rem;
 
-#sub-title {
-  font-size: 1.7rem;
-  font-family: 'iA Writer Mono', monospace;
-  font-style: italic;
-  color: var(--gray);
-  text-align: left;
-  margin-top: 10px;
-}
+      #photoProfile {
+        border-radius: 150px;
+        max-width: 100%;
+      }
+    }
 
-.icons {
-  grid-area: icons;
-  margin: 0 auto;
-}
+    .title {
+      grid-area: title;
+      margin-top: 5px;
 
-/* Icons */
-#logo-github,
-#logo-linkedin,
-#logo-cv {
-  margin-top: 5px;
-  width: 40px;
-  height: 40px;
-  padding-left: 10px;
 
-}
+      #title-1 {
+        /* Texto mayúscula */
+        text-transform: uppercase;
+        font-size: 2.1rem;
+        font-family: 'iA Writer Mono', monospace;
+        font-weight: bold;
+        padding-left: 3px;
+        margin-top: 1px;
+        color: var(--color1);
+      }
 
-a {
-  text-decoration: none;
-  list-style: none;
-  color: var(--color3);
-}
+    }
 
-/* Iconos SVG  */
-.nav__toggle #openMenu,
-#closeMenu {
-  width: 30px;
-  height: 30px;
-}
+    .subTitle {
+      grid-area: subTitle;
+      padding-left: 20px;
 
-/* ocultar checkbox e iconos svg  */
-#openMenu,
-#closeMenu,
-#nav_checkbox {
-  display: none;
-}
+      #sub-title {
+        font-size: 1.7rem;
+        font-family: 'iA Writer Mono', monospace;
+        font-style: italic;
+        color: var(--gray);
+        text-align: left;
+        margin-top: 10px;
+      }
+    }
 
-.container-4 {
-  display: grid;
-  grid-area: container-4;
-  align-items: center;
-  width: 100%;
-  /* Hice la separación desde aca y no usando un padding. */
-  padding-bottom: 10px;
-}
+    .icons {
+      grid-area: icons;
+      margin: 0 auto;
 
-.nav__menuElements {
-  font-size: 1.3rem;
-  width: 100%;
-}
+      /* Icons */
+      #logo-github,
+      #logo-linkedin,
+      #logo-cv {
+        margin-top: 5px;
+        width: 40px;
+        height: 40px;
+        padding-left: 10px;
+      }
+    }
 
-.itemsElements {
-  text-decoration: none;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-}
 
-.itemsElements .links :hover {
-  /* Dibujamos Línea con efecto hover */
-  text-decoration-line: underline;
-  text-decoration-color: var(--pink);
-}
+  }
 
-.links {
-  color: var(--black);
-}
 
-.btn1,
-.btn2,
-.btn3,
-.btn4,
-.btn5 {
-  font-family: 'iA Writer Mono', monospace;
-  text-decoration-thickness: 0.2ex;
-  text-underline-offset: 0.5ex;
-  text-decoration-color: var(--black);
-  cursor: pointer;
-  color: var(--gray);
-}
+  .container-4 {
+    display: grid;
+    grid-area: container-4;
+    align-items: center;
+    width: 100%;
+    /* Hice la separación desde aca y no usando un padding. */
+    padding-bottom: 10px;
 
-.btn1:hover,
-.btn3:hover,
-.btn2:hover,
-.btn4:hover,
-.btn5:hover {
-  text-decoration-color: var(--pink);
-}
+    /* Iconos SVG  */
+    .nav__toggle #openMenu,
+    #closeMenu {
+      width: 30px;
+      height: 30px;
+    }
 
-.container-5 {
-  display: grid;
-  grid-area: container-5;
-  margin-top: 10px;
-  max-width: 100%;
-}
+    /* ocultar checkbox e iconos svg  */
+    #openMenu,
+    #closeMenu,
+    #nav_checkbox {
+      display: none;
+    }
 
-/* Texto párrafo. */
-.container-5 {
-  font-family: 'iA Writer Mono', monospace;
-  text-align: justify;
-  /* separación de texto */
-  line-height: 1.6rem;
-  /* border: 1px solid white; */
-}
+    .nav__menuElements {
+      font-size: 1.3rem;
+      width: 100%;
 
-#text {
-  padding: 10px;
-  font-size: 2vh;
+      .itemsElements {
+        text-decoration: none;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+
+        .links {
+          color: var(--black);
+
+          .btn {
+            font-family: 'iA Writer Mono', monospace;
+            text-decoration-thickness: 0.2ex;
+            text-underline-offset: 0.5ex;
+            text-decoration-color: var(--black);
+            cursor: pointer;
+            color: var(--gray);
+          }
+
+          .btn:hover {
+            text-decoration-color: var(--pink);
+          }
+
+        }
+      }
+
+      .itemsElements .links :hover {
+        /* Dibujamos Línea con efecto hover */
+        text-decoration-line: underline;
+        text-decoration-color: var(--pink);
+      }
+    }
+  }
+
+  /* Texto párrafo */
+  .container-5 {
+    display: grid;
+    grid-area: container-5;
+    margin-top: 10px;
+    max-width: 100%;
+    font-family: 'iA Writer Mono', monospace;
+    text-align: justify;
+    /* separación de texto */
+    line-height: 1.6rem;
+    /* border: 1px solid white; */
+
+    #text {
+      padding: 10px;
+      font-size: 2vh;
+
+    }
+
+  }
+
 
 }
 
@@ -231,176 +222,176 @@ a {
   grid-template-columns: repeat(3, 1fr);
   max-width: 100%;
   justify-items: center;
-}
 
-footer .separator {
-  display: grid;
-  grid-area: separator;
-  position: relative;
-  margin-top: 20px;
-  height: 0;
-  width: 15vmin;
-  border-top: 3px solid white;
-  margin: 0 auto;
-  padding-bottom: 8px;
-}
-
-
-.footer-content {
-  grid-area: footer-content;
-  justify-content: center;
-  column-gap: 8px;
-}
-
-.text-content {
-  grid-area: text-content;
-  padding: 10px;
-}
-
-#textName {
-  font-size: 1.4rem;
-  font-family: 'iA Writer Mono', monospace;
-  text-transform: uppercase;
-}
-
-/* mobileResponsive*/
-/* TODO:Cambiar posición de estos elementos. */
-@media only screen and (max-width: 620px) {
-
-  .container {
-    width: 100%;
+  footer .separator {
     display: grid;
-  }
-
-  .header-section {
-    display: grid;
-    width: 100%;
-    margin: 10px auto;
-    grid-template-rows: 1fr repeat(4, auto);
-    grid-template-columns: 50% 50%;
-    grid-template-areas: "profile-photo profile-photo profile-photo"
-      "title title title"
-      "subTitle subTitle subTitle"
-      "icons icons icons";
-  }
-
-  .profile-photo {
-    padding: 0px;
-    margin: 0px auto;
-    display: grid;
-    grid-area: profile-photo;
-    justify-items: center;
-  }
-
-  .profile-photo img {
-    width: 500px;
-    height: 200px;
-  }
-
-  .icons {
-    display: flex;
+    grid-area: separator;
     position: relative;
-    grid-area: icons;
-    width: 100%;
+    margin-top: 20px;
+    height: 0;
+    width: 15vmin;
+    border-top: 3px solid white;
+    margin: 0 auto;
+    padding-bottom: 8px;
+  }
+
+  .footer-content {
+    grid-area: footer-content;
     justify-content: center;
+    column-gap: 8px;
   }
 
-  .title {
-    display: grid;
-    grid-area: title;
-    justify-items: center;
-  }
+  .text-content {
+    grid-area: text-content;
+    padding: 10px;
 
-  .title-1 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  #sub-title {
-    font-size: 1rem;
-  }
-
-  .subTitle {
-    display: grid;
-    grid-area: subTitle;
-    width: 100%;
-    padding: 0px;
-    justify-items: center;
-  }
-
-  /* Menú */
-  .container-4 {
-    display: flex;
-    height: 100%;
-    top: 2px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  /* Elementos del menú */
-  ul.itemsElements {
-    display: none;
-    list-style-type: none;
-  }
-
-  .nav__toggle {
-    cursor: pointer;
-    right: 0px;
-    top: 0px;
-    position: absolute;
-  }
-
-  .nav__menuElements {
-    height: auto;
-
-    /* Esto es lo mismo que usar a
-    .nav__menuElements:last-child
-    */
-    &:last-child {
-      justify-content: center;
+    #textName {
+      font-size: 1.4rem;
+      font-family: 'iA Writer Mono', monospace;
+      text-transform: uppercase;
     }
   }
 
-  /* mostrar svg hamburger */
-  .nav__toggle #openMenu {
-    display: block;
-    cursor: pointer;
-    position: relative;
-  }
 
-  #nav_checkbox:checked~label.nav__toggle .close {
-    display: block;
-  }
+}
 
-  #nav_checkbox:checked~.nav__menuElements ul.itemsElements {
-    /* Cuando se pulse el botón, muestre los elementos con un 100% del contenedor en formato flex */
-    display: flex;
+/* responsiveMobile */
+@media only screen and (max-width: 620px) {
+  .page1 {
     width: 100%;
+    display: grid;
+
+    .header-section {
+      display: grid;
+      width: 100%;
+      margin: 10px auto;
+      grid-template-rows: 1fr repeat(4, auto);
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "profile-photo profile-photo profile-photo"
+        "title title title"
+        "subTitle subTitle subTitle"
+        "icons icons icons";
+
+      #profile-photo {
+        padding: 0px;
+        margin: 0px auto;
+        display: grid;
+        grid-area: profile-photo;
+        justify-items: center;
+
+        #photoProfile {
+          width: 500px;
+          height: 200px;
+        }
+      }
+    }
+
+    .icons {
+      display: flex;
+      position: relative;
+      grid-area: icons;
+      width: 100%;
+      justify-content: center;
+    }
+
+    .title {
+      display: grid;
+      grid-area: title;
+      justify-items: center;
+
+      #title-1 {
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    }
+
+    .subTitle {
+      display: grid;
+      grid-area: subTitle;
+      width: 100%;
+      padding: 0px;
+      justify-items: center;
+
+      #sub-title {
+        font-size: 1rem;
+      }
+    }
+
+    /* Menú */
+    .container-4 {
+      display: flex;
+      height: 100%;
+      top: 2px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      /* Elementos del menú */
+      .itemsElements {
+        display: none;
+        list-style-type: none;
+      }
+
+      .nav__toggle {
+        cursor: pointer;
+        right: 0px;
+        top: 0px;
+        position: absolute;
+      }
+
+      .nav__menuElements {
+        height: auto;
+        display: none;
+
+        /* Esto es lo mismo que usar a
+          .nav__menuElements:last-child
+        */
+        &:last-child {
+          justify-content: center;
+        }
+      }
+
+      /* mostrar svg hamburger */
+      .nav__toggle #openMenu {
+        display: block;
+        cursor: pointer;
+        position: relative;
+      }
+
+      #nav_checkbox:checked~label.nav__toggle .close {
+        display: block;
+      }
+
+      #nav_checkbox:checked~.nav__menuElements {
+        /* Cuando se pulse el botón, muestre los elementos con un 100% del contenedor en formato flex */
+        display: flex;
+        width: 100%;
+        flex-direction: column-reverse;
+
+      }
+
+      /* Cuando presione click en el hamburger menu se debe de ocultar, usando la opción display block */
+      #nav_checkbox:checked~label.nav__toggle .menu {
+        display: none;
+      }
+
+      .btn {
+        font-size: 1.0rem;
+      }
+    }
+
+    .container-5 {
+      margin-top: 0px;
+      padding: 0px;
+      position: relative;
+
+      #text {
+        padding: 10px;
+        font-size: 2vh;
+      }
+    }
   }
 
-  /* Cuando presione click en el hamburger menu se debe de ocultar, usando la opción display block */
-  #nav_checkbox:checked~label.nav__toggle .menu {
-    display: none;
+  footer {
+    height: calc(100vh - 910px);
   }
-
-  .btn1,
-  .btn2,
-  .btn3,
-  .btn4,
-  .btn5 {
-    font-size: 1.0rem;
-  }
-
-  .container-5 p {
-    /* font-size: 1rem; */
-    font-size: 1.3vh;
-    margin-top: 0px;
-    padding: 0px;
-  }
-
-  #text {
-    padding: 10px;
-    font-size: 2vh;
-  }
-
 }
