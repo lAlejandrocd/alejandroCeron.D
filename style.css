@@ -40,6 +40,7 @@ body {
 }
 
 .page1 {
+
   width: 750px;
   max-width: 100%;
   margin: 0 auto;
@@ -130,7 +131,6 @@ body {
 
   }
 
-
   .container-4 {
     display: grid;
     grid-area: container-4;
@@ -190,6 +190,7 @@ body {
     }
   }
 
+
   /* Texto párrafo */
   .container-5 {
     display: grid;
@@ -209,9 +210,8 @@ body {
     }
 
   }
-
-
 }
+
 
 .footer {
   display: grid;
