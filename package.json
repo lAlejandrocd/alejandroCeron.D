@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/lAlejandrocd/alejandroCeron.D#readme",
   "dependencies": {
-    "@fontsource/ia-writer-mono": "^5.0.7"
+    "@fontsource/ia-writer-mono": "^5.1.0"
   },
   "devDependencies": {
     "gh-pages": "^6.1.1",
