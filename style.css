@@ -239,6 +239,13 @@ body {
     grid-area: footer-content;
     justify-content: center;
     column-gap: 8px;
+
+    #logo-githubFooter,
+    #logo-linkedinFooter,
+    #logo-cvFooter {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   .text-content {
