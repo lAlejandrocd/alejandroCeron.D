@@ -1,5 +1,5 @@
 
-import './style';
+import './style.css';
 import { App } from './src/index.js';
 
 
