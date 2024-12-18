@@ -1,5 +1,5 @@
 // Defaults to weight 400
-import '@fontsource/ia-writer-mono';
+import './@fontsource/ia-writer-mono';
 
 /**
  * nombreArchivo.html?raw
