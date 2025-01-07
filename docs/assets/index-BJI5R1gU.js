@@ -17,7 +17,7 @@
       <a href="#">\r
         <ion-icon name="logo-github" id="logo-github"></ion-icon>\r
       </a>\r
-      <a href="" onclick="window.open('/assets/pdf/cvAlejandroCeron.pdf')">\r
+      <a href="" onclick="window.open('/alejandroCeron.D/assets/pdf/cvAlejandroCeron.pdf')">\r
         <ion-icon name="document-attach-outline" id="logo-cv"></ion-icon>\r
       </a>\r
 \r
