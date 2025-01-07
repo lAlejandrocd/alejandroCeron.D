@@ -1,7 +1,7 @@
 (function(){const n=document.createElement("link").relList;if(n&&n.supports&&n.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))s(e);new MutationObserver(e=>{for(const i of e)if(i.type==="childList")for(const r of i.addedNodes)r.tagName==="LINK"&&r.rel==="modulepreload"&&s(r)}).observe(document,{childList:!0,subtree:!0});function t(e){const i={};return e.integrity&&(i.integrity=e.integrity),e.referrerPolicy&&(i.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?i.credentials="include":e.crossOrigin==="anonymous"?i.credentials="omit":i.credentials="same-origin",i}function s(e){if(e.ep)return;e.ep=!0;const i=t(e);fetch(e.href,i)}})();const a=`<main class="header-section">\r
     <div id="profile-photo">\r
       <!-- <img src="../../public/assets/img/photo-profile.jpg"  alt="profile-photo" id="photoProfile"> -->\r
-      <img src="./alejandroCeron.D/assets/img/photo-profile.jpg"  alt="profile-photo" id="photoProfile">\r
+      <img src="/alejandroCeron.D/assets/img/photo-profile.jpg"  alt="profile-photo" id="photoProfile">\r
     </div>\r
     <div class="title">\r
       <h1 id="title-1">\r
@@ -17,7 +17,7 @@
       <a href="#">\r
         <ion-icon name="logo-github" id="logo-github"></ion-icon>\r
       </a>\r
-      <a href="" onclick="window.open('./public/assets/pdf/cvAlejandroCeron.pdf')">\r
+      <a href="" onclick="window.open('/public/assets/pdf/cvAlejandroCeron.pdf')">\r
         <ion-icon name="document-attach-outline" id="logo-cv"></ion-icon>\r
       </a>\r
 \r
@@ -31,13 +31,13 @@
   <div class="container-4">\r
     <input type="checkbox" name="" id="nav_checkbox" class="nav__checkbox">\r
     <label for="nav_checkbox" class="nav__toggle">\r
-      <img src="./alejandroCeron.D/assets/img/svg/openMenu.svg" alt="" id="openMenu" class="menu">\r
-      <img src="./alejandroCeron.D/assets/img/svg/closeMenu.svg" alt="" id="closeMenu" class="close">\r
+      <img src="/alejandroCeron.D/assets/img/svg/openMenu.svg" alt="" id="openMenu" class="menu">\r
+      <img src="/alejandroCeron.D/assets/img/svg/closeMenu.svg" alt="" id="closeMenu" class="close">\r
     </label>\r
     <div class="nav__menuElements">\r
       <ul class="itemsElements">\r
         <li class="links">\r
-          <a href="./src/app/pages/projects.html" class="btn">Proyectos</a></li>\r
+          <a href="/src/app/pages/projects.html" class="btn">Proyectos</a></li>\r
         <li class="links">\r
           <a href="#" class="btn">Contacto</a></li>\r
         <li class="links">\r
@@ -67,7 +67,7 @@
       <a href="#">\r
         <ion-icon name="logo-github" id="logo-githubFooter"></ion-icon>\r
       </a>\r
-      <a href="" onclick="window.open('./public/assets/pdf/cvAlejandroCeron.pdf')">\r
+      <a href="" onclick="window.open('/public/assets/pdf/cvAlejandroCeron.pdf')">\r
         <ion-icon name="document-attach-outline" id="logo-cvFooter"></ion-icon>\r
       </a>\r
       <a href="#">\r
