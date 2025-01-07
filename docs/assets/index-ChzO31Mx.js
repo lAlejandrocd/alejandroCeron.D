@@ -43,7 +43,7 @@
         <li class="links">\r
           <a href="#" class="btn">Formación/Experiencia</a></li>\r
         <li class="links">\r
-          <a href="" onclick="window.open('/public/assets/pdf/cvAlejandroCeron.pdf')" class="btn5 ">CV</a>\r
+          <a href="" onclick="window.open('assets/pdf/cvAlejandroCeron.pdf')" class="btn5 ">CV</a>\r
         </li>\r
       </ul>\r
     </div>\r
