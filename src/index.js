@@ -5,7 +5,7 @@ import '@fontsource/ia-writer-mono'; // Defaults to weight 400
  * ? = lo usamos para identificar el archivo en raw, es propio de vite
  * raw = significa que es en crudo, es decir, texto plano
 */
-import html from '/app/html.html?raw';
+import html from './app/html.html?raw';
 
 /**
  * @param {String} elementId //Recibe el id del contenedor en donde quiero renderizar el html
